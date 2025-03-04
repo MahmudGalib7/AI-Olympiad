@@ -125,17 +125,11 @@ def kmeans(self, k: int = 3, max_iter: int = 100) -> Tuple[np.ndarray, np.ndarra
 
 I’d love to connect with fellow AI enthusiasts and competitors! Let’s learn, grow, and build something amazing together.
 
-📧 **Email:** your.email@example.com  
-🐙 **GitHub:** YourUsername  
-🔗 **LinkedIn:** Your Name  
+📧 **Email:** mahmudgalib2009@gmail.com  
+🐙 **GitHub:** MahmudGalib7  
 
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 <p align="center"> <strong>"The only true wisdom is in knowing you know nothing." — Socrates</strong><br> My journey of continuous learning in the fascinating world of AI 🌱 </p>
-
----
-
-What do you think? Let me know if you want me to tweak anything! 🚀
-
