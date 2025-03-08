@@ -1,18 +1,32 @@
-auto-label:
-  rules:
-    - label: "progress"
-      path: "**.md"
+name: Progress Tracker
 
-auto-assign:
-  enabled: true
-  reviewers:
-    - "MahmudGalib7"
+on:
+  push:
+    branches:
+      - master
 
-auto-request-review:
-  enabled: true
-  reviewers:
-    - "MahmudGalib7"
+jobs:
+  update-progress:
+    runs-on: ubuntu-latest
 
-comment-on-pr:
-  enabled: true
-  message: "New learning update detected. Review and merge when ready!"
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+
+    - name: Install whisker
+      run: |
+        pip install whisker
+
+    - name: Verify whisker installation
+      run: |
+        whisker --version
+
+    - name: Run whisker track
+      run: |
+        echo "Tracking progress..."
+        whisker track
