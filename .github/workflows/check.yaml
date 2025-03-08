@@ -13,7 +13,7 @@ jobs:
         with:
           whiskers-version: 2.5.1
       - run: |
-          whiskers templates/model_config.tera -o model_config.yaml --data "
+          whiskers templates/model_config.tera -o model_config.yaml --check --overrides "
           {
             \"model_name\": \"MyTestModel\",
             \"layers\": 4,
@@ -24,4 +24,4 @@ jobs:
             \"dataset_name\": \"MNIST\",
             \"batch_size\": 32,
             \"shuffle\": true
-          }" --check
+          }"
