@@ -25,11 +25,12 @@ Welcome to my AI Olympiad preparation repository! This space captures my hands-o
 
 ```
 AI-Olympiad/
-├── 📂 python_basics/
-│   ├── 📘 fundamentals/
-│   └── 🔢 numpy_pandas/
+├── 📂 python/
+│   ├── 📘 Basic/
+│   └── 🔢 DSA/
 ├── 📊 data_analysis/
-│   ├── 📈 statistics/
+│   ├── 📈 numpy/
+|   ├── 📈 pandas/
 │   └── 📚 visualization/
 ├── 🧠 machine_learning/
 │   ├── 🔍 classical_algorithms/
@@ -47,8 +48,8 @@ AI-Olympiad/
 │   ├── 🚀 bdai_olympiad/
 │   └── 📝 mock_contests/
 └── 📚 resources/
-    ├── 📖 papers/
-    └── 🧩 tutorials/
+    ├── 📖 Books/
+    └── prep.md
 ```
 
 ## 📊 Featured Project: NumPy Data Analyzer
