@@ -13,7 +13,7 @@ jobs:
         with:
           whiskers-version: 2.5.1
       - run: |
-          whiskers templates/learning_progress.tera --output-format yaml --check --overrides "
+          whiskers templates/main.tera --output-format yaml --check --overrides "
           {
             \"topic\": \"NumPy Basics\",
             \"status\": \"Completed\",
