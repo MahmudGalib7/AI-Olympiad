@@ -19,15 +19,18 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install Whiskers
-        run: pip install whiskers
+      - name: Install Jinja2
+        run: pip install Jinja2
 
-      - name: Verify Whiskers Installation
-        run: whiskers --version
-
-      - name: Render YAML from template
+      - name: Render YAML from template using Python
         run: |
-          whiskers -t learning_progress.tera -o learning_progress.yaml
+          python -c "
+          from jinja2 import Template
+          template = Template(open('learning_progress.tera').read())
+          rendered = template.render(TOPIC='${{ env.TOPIC }}', STATUS='${{ env.STATUS }}', DATE='${{ env.DATE }}', NOTES='${{ env.NOTES }}')
+          with open('learning_progress.yaml', 'w') as f:
+              f.write(rendered)
+          "
         env:
           TOPIC: "Python Basics"
           STATUS: "Completed"
