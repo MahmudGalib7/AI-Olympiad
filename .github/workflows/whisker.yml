@@ -10,23 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
 
-    - name: Install whisker
-      run: |
-        pip install whisker
+      # Install whisker
+      - name: Install whisker
+        run: |
+          pip install --upgrade whisker  # Ensure we are getting the latest version
 
-    - name: Verify whisker installation
-      run: |
-        whisker --version
+      # Verify whisker installation
+      - name: Verify whisker installation
+        run: |
+          whisker --version  # This should work if whisker is installed correctly
 
-    - name: Run whisker track
-      run: |
-        echo "Tracking progress..."
-        whisker track
+      # Track progress with whisker
+      - name: Track progress
+        run: |
+          whisker track  # Assuming this command works after successful installation
