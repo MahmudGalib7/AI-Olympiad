@@ -1,0 +1,14 @@
+# model_config.yaml
+
+model:
+  name: "{{ model_name }}"
+  layers: {{ layers }}
+  activation_function: "{{ activation_function }}"
+  learning_rate: {{ learning_rate }}
+  epochs: {{ epochs }}
+  optimizer: "{{ optimizer }}"
+
+dataset:
+  name: "{{ dataset_name }}"
+  batch_size: {{ batch_size }}
+  shuffle: {{ shuffle }}
