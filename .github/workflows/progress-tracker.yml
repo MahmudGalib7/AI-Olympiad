@@ -31,9 +31,24 @@ jobs:
           git checkout -b progress-update-$(date +%Y-%m-%d)
           git add progress_report.md
           git commit -m "Update learning progress on $(date)"
-          # Pull changes from the remote branch to avoid conflicts
-          git pull origin progress-update-$(date +%Y-%m-%d) --rebase || echo "No changes to pull"
-          # Push the changes to the remote repository
+        
+          # Abort rebase if it's in progress (prevent potential deadlock)
+          git rebase --abort || echo "No rebase in progress"
+    
+          # Pull with rebase and automatic conflict resolution
+          git pull origin progress-update-$(date +%Y-%m-%d) --rebase=interactive || echo "No changes to pull"
+    
+          # In case of merge conflict, resolve automatically (keep your changes)
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+    
+          # Stage the files after resolving conflicts
+          git add . || echo "No conflicts to resolve"
+    
+          # Commit the resolved conflict changes
+          git commit -m "Resolved conflicts and pushing update" || echo "No conflicts to commit"
+    
+          # Push the changes back
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/MahmudGalib7/AI-Olympiad.git progress-update-$(date +%Y-%m-%d)
 
 
