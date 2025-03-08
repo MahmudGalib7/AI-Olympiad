@@ -33,13 +33,12 @@ jobs:
           git commit -m "Update learning progress on $(date)"
           git push origin progress-update-$(date +%Y-%m-%d)
 
-      - name: Create a Pull Request
+      - name: Create or update the pull request
         uses: peter-evans/create-pull-request@v5
         with:
-          title: "Learning Progress Update - $(date)"
-          body: "Automated PR tracking the latest learning updates."
-          base: master
-          branch: progress-update-$(date +%Y-%m-%d)
-          labels: progress, automated
+          branch: progress-update-${{ github.run_id }}
+          title: "Learning Progress Update - ${{ github.run_id }}"
+          body: "Automated learning progress update on ${{ github.event.repository.updated_at }}"
+          labels: "progress, automated"
           assignees: "MahmudGalib7"
           reviewers: "MahmudGalib7"
