@@ -21,24 +21,17 @@ jobs:
         
     - name: Commit and Push Changes
       run: |
-        # Create and switch to a new branch based on current date
         git checkout -b progress-update-$(date +%Y-%m-%d)
-        
-        # Create/Update the progress report file
         echo "## Learning Update on $(date)" > progress_report.md
-        
-        # Stage and commit the progress report
         git add progress_report.md
         git commit -m "Update learning progress on $(date)"
-        
-        # Fetch latest changes from the remote repository
-        git fetch origin progress-update-$(date +%Y-%m-%d)
-        
-        # Rebase local changes on top of the latest remote commits
-        git rebase origin/progress-update-$(date +%Y-%m-%d) || {
-          echo "Rebase failed due to conflicts. Aborting...";
-          git rebase --abort;
-        }
-        
-        # Push the changes to the remote repository (force push if needed)
         git push --force https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/MahmudGalib7/AI-Olympiad.git progress-update-$(date +%Y-%m-%d)
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        base: master
+        head: progress-update-$(date +%Y-%m-%d)
+        title: "Update Progress: $(date)"
+        body: "This pull request contains updates on the learning progress made towards AI Olympiad."
