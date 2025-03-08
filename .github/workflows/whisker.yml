@@ -1,0 +1,18 @@
+auto-label:
+  rules:
+    - label: "progress"
+      path: "**.md"
+
+auto-assign:
+  enabled: true
+  reviewers:
+    - "MahmudGalib7"
+
+auto-request-review:
+  enabled: true
+  reviewers:
+    - "MahmudGalib7"
+
+comment-on-pr:
+  enabled: true
+  message: "New learning update detected. Review and merge when ready!"

@@ -1,0 +1,43 @@
+name: Track Learning Progress
+
+on:
+  push:
+    branches:
+      - master # Runs on every push to master
+
+jobs:
+  track-progress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "AI-Olympiad-Bot"
+          git config --global user.email "bot@ai-olympiad.com"
+
+      - name: Create progress report
+        run: |
+          echo "## Learning Update on $(date)" > progress_report.md
+          git diff --name-only HEAD^ HEAD >> progress_report.md
+          echo -e "\n### Description\n- This PR contains new learning materials and updates." >> progress_report.md
+
+      - name: Commit and Push Changes
+        run: |
+          git checkout -b progress-update-$(date +%Y-%m-%d)
+          git add progress_report.md
+          git commit -m "Update learning progress on $(date)"
+          git push origin progress-update-$(date +%Y-%m-%d)
+
+      - name: Create a Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: "Learning Progress Update - $(date)"
+          body: "Automated PR tracking the latest learning updates."
+          base: master
+          branch: progress-update-$(date +%Y-%m-%d)
+          labels: progress, automated
+          assignees: "MahmudGalib7"
+          reviewers: "MahmudGalib7"
