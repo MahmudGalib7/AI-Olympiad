@@ -32,6 +32,6 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         base: master
-        head: progress-update-$(date +%Y-%m-%d)
+        branch: progress-update-$(date +%Y-%m-%d)  # Change 'head' to 'branch'
         title: "Update Progress: $(date)"
         body: "This pull request contains updates on the learning progress made towards AI Olympiad."
