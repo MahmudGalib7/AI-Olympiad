@@ -1,0 +1,7 @@
+# learning_progress.yaml
+
+milestones:
+  - topic: "{{ topic }}"
+    status: "{{ status }}"
+    date: "{{ date }}"
+    notes: "{{ notes }}"
