@@ -1,63 +1,44 @@
-name: Track Learning Progress
+name: AI Olympiad Progress Tracker
 
 on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
-  track-progress:
+  update-progress:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 2  # Fetch last 2 commits to avoid HEAD^ errors
+    
+    - name: Checkout the repository
+      uses: actions/checkout@v2
 
-      - name: Set up Git
-        run: |
-          git config --global user.name "AI-Olympiad-Bot"
-          git config --global user.email "bot@ai-olympiad.com"
-
-      - name: Create progress report
-        run: |
-          echo "## Learning Update on $(date)" > progress_report.md
-          git diff --name-only HEAD^ HEAD >> progress_report.md
-          echo -e "\n### Description\n- This PR contains new learning materials and updates." >> progress_report.md
-
-      - name: Commit and Push Changes
-        run: |
-          git checkout -b progress-update-$(date +%Y-%m-%d)
-          git add progress_report.md
-          git commit -m "Update learning progress on $(date)"
+    - name: Set up Git
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
         
-          # Abort rebase if it's in progress (prevent potential deadlock)
-          git rebase --abort || echo "No rebase in progress"
-    
-          # Pull with rebase and automatic conflict resolution
-          git pull origin progress-update-$(date +%Y-%m-%d) --rebase=interactive || echo "No changes to pull"
-    
-          # In case of merge conflict, resolve automatically (keep your changes)
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-    
-          # Stage the files after resolving conflicts
-          git add . || echo "No conflicts to resolve"
-    
-          # Commit the resolved conflict changes
-          git commit -m "Resolved conflicts and pushing update" || echo "No conflicts to commit"
-    
-          # Push the changes back
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/MahmudGalib7/AI-Olympiad.git progress-update-$(date +%Y-%m-%d)
-
-
-      - name: Create or update the pull request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          branch: progress-update-${{ github.run_id }}
-          title: "Learning Progress Update - ${{ github.run_id }}"
-          body: "Automated learning progress update on ${{ github.event.repository.updated_at }}"
-          labels: "progress, automated"
-          assignees: "MahmudGalib7"
-          reviewers: "MahmudGalib7"
+    - name: Commit and Push Changes
+      run: |
+        # Create and switch to a new branch based on current date
+        git checkout -b progress-update-$(date +%Y-%m-%d)
+        
+        # Create/Update the progress report file
+        echo "## Learning Update on $(date)" > progress_report.md
+        
+        # Stage and commit the progress report
+        git add progress_report.md
+        git commit -m "Update learning progress on $(date)"
+        
+        # Fetch latest changes from the remote repository
+        git fetch origin progress-update-$(date +%Y-%m-%d)
+        
+        # Rebase local changes on top of the latest remote commits
+        git rebase origin/progress-update-$(date +%Y-%m-%d) || {
+          echo "Rebase failed due to conflicts. Aborting...";
+          git rebase --abort;
+        }
+        
+        # Push the changes to the remote repository (force push if needed)
+        git push --force https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/MahmudGalib7/AI-Olympiad.git progress-update-$(date +%Y-%m-%d)
