@@ -22,11 +22,16 @@ jobs:
       - name: Install Jinja2
         run: pip install Jinja2
 
-      - name: Render YAML from template using Python
+      - name: Render YAML from embedded template
         run: |
           python -c "
           from jinja2 import Template
-          template = Template(open('learning_progress.tera').read())
+          template = Template('''
+          topic: '{{ TOPIC }}'
+          status: '{{ STATUS }}'
+          date: '{{ DATE }}'
+          notes: '{{ NOTES }}'
+          ''')
           rendered = template.render(TOPIC='${{ env.TOPIC }}', STATUS='${{ env.STATUS }}', DATE='${{ env.DATE }}', NOTES='${{ env.NOTES }}')
           with open('learning_progress.yaml', 'w') as f:
               f.write(rendered)
