@@ -31,7 +31,11 @@ jobs:
           git checkout -b progress-update-$(date +%Y-%m-%d)
           git add progress_report.md
           git commit -m "Update learning progress on $(date)"
-          git push origin progress-update-$(date +%Y-%m-%d)
+          # Pull changes from the remote branch to avoid conflicts
+          git pull origin progress-update-$(date +%Y-%m-%d) --rebase || echo "No changes to pull"
+          # Push the changes to the remote repository
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/MahmudGalib7/AI-Olympiad.git progress-update-$(date +%Y-%m-%d)
+
 
       - name: Create or update the pull request
         uses: peter-evans/create-pull-request@v5
