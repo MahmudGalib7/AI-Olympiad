@@ -3,7 +3,7 @@ name: Track Learning Progress
 on:
   push:
     branches:
-      - master # Runs on every push to master
+      - master
 
 jobs:
   track-progress:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Fetch last 2 commits to avoid HEAD^ errors
 
       - name: Set up Git
         run: |
