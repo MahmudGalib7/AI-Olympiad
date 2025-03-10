@@ -1,30 +1,20 @@
-# n = int(input("Enter the number of element: "))
-# l = []
-#
-# for i in range(n):
-#     x = int(input("Enter an element: "))
-#     if x not in l:
-#         l.append(x)
-#
-# print(list(set(l)))
+import numpy as np
 
-# x = {2,4,6,8,10}
-# y = {1,2,3,4,5}
-# z = {1,3,5,6,7}
+arr1 = np.array([[1,2,3,4,5,6],[7,8,9,10,11,12]])
+arr2 = np.array([[4,5,6],[10,11,12]])
+arr3 = np.array([13,14,15,16,17,18,19,20])
+arr4 = np.array([16,17])
 
-# x.intersection_update(y)
-# print(x)
-#
-# union_x_y_z = x.union(y,z)
-# intersection_x_y = x.intersection(y)
-# print(union_x_y_z)
-# print(intersection_x_y)
+# joint_arr1_2 = np.concatenate((arr1,arr2), axis=1)
+# joint_arr3_4 = np.stack((arr3,arr4))
+# joint_arr3_4 = np.hstack((arr3,arr4))
+# joint_arr3_4 = np.vstack((arr3,arr4))
+# joint_arr3_4 = np.dstack((arr3,arr4))
+# print(joint_arr3_4)
 
-set1 = {"a","b","c"}
-set2 = {"c","d","e"}
+# split_arr3_4 = np.array_split(arr3, 3)
+# print(split_arr3_4)
+# print(split_arr3_4[0])
 
-# set3 = set1 - set2
-# set3 = set1.difference(set2)
-# set3 = set1.symmetric_difference(set2)
-set1.symmetric_difference_update(set2)
-print(set1)
+split_arr1_2 = np.split(arr1, 3)
+print(split_arr1_2)

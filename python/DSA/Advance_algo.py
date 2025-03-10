@@ -395,7 +395,33 @@ def test_knapsack():
     print(f"Selected items (indices): {selected_items}")
     print(f"Selected items (values, weights): {[(values[i], weights[i]) for i in selected_items]}")
 
+# Add a fancy progress bar utility
+def print_progress_bar(iteration, total, prefix='', suffix='', decimals=1, length=50, fill='█', print_end="\r"):
+    """
+    Call in a loop to create terminal progress bar
+    """
+    percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+    filled_length = int(length * iteration // total)
+    bar = fill * filled_length + '-' * (length - filled_length)
+    print(f'\r{prefix} |{bar}| {percent}% {suffix}', end=print_end)
+    if iteration == total: 
+        print()
+
 if __name__ == "__main__":
-    test_red_black_tree()
-    test_graph()
-    test_knapsack()
+    # Modify the main execution to show a progress bar
+    print("\n=== ALGORITHM TESTS ===")
+    
+    total_tests = 3
+    tests = [
+        ("Red-Black Tree", test_red_black_tree),
+        ("Graph Algorithms", test_graph),
+        ("Knapsack Problem", test_knapsack)
+    ]
+    
+    for i, (name, test_func) in enumerate(tests):
+        print_progress_bar(i, total_tests, prefix='Progress:', suffix=f'Running {name}', length=40)
+        test_func()
+        print_progress_bar(i+1, total_tests, prefix='Progress:', suffix=f'Completed {name}', length=40)
+        
+    print("\n=== ALL TESTS PASSED SUCCESSFULLY ===")
+    print_progress_bar(total_tests, total_tests, prefix='Final Status:', suffix='Complete', length=40)

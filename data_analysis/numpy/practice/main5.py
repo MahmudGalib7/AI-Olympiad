@@ -1,20 +1,33 @@
 import numpy as np
 
-arr1 = np.array([[1,2,3,4,5,6],[7,8,9,10,11,12]])
-arr2 = np.array([[4,5,6],[10,11,12]])
-arr3 = np.array([13,14,15,16,17,18,19,20])
-arr4 = np.array([16,17])
+arr1d = np.array([10,1,8,7,3,4,9,5,6,2])
+filter_arr = []
+for e in arr1d:
+    if e > 5:
+        filter_arr.append(True)
+    else:
+        filter_arr.append(False)
 
-# joint_arr1_2 = np.concatenate((arr1,arr2), axis=1)
-# joint_arr3_4 = np.stack((arr3,arr4))
-# joint_arr3_4 = np.hstack((arr3,arr4))
-# joint_arr3_4 = np.vstack((arr3,arr4))
-# joint_arr3_4 = np.dstack((arr3,arr4))
-# print(joint_arr3_4)
+print(filter_arr)
 
-# split_arr3_4 = np.array_split(arr3, 3)
-# print(split_arr3_4)
-# print(split_arr3_4[0])
+arr2d = np.array([[1,2,3],[4,5,6],[7,8,9]])
+arr3d = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
 
-split_arr1_2 = np.split(arr1, 3)
-print(split_arr1_2)
+# print(np.where(arr1d >= 4))
+# print(np.where(arr1d % 2 != 0))
+
+# print(np.sort(arr1d))
+# print(np.sort(arr2d))
+# print(np.sort(arr3d))
+
+arr_str = np.array(['banana', 'cherry', 'apple'])
+# print(np.sort(arr_str))
+
+arr_bool = np.array([True, True, False])
+# print(np.sort(arr_bool))
+
+int_arr_1 = np.array([1,2,3])
+int_arr_2 = np.array([4,5,6])
+
+new_arr = int_arr_1[arr_bool]
+print(new_arr)
