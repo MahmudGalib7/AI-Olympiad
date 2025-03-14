@@ -1,4 +1,0 @@
-topic: "{{ TOPIC }}"
-status: "{{ STATUS }}"
-date: "{{ DATE }}"
-notes: "{{ NOTES }}"
