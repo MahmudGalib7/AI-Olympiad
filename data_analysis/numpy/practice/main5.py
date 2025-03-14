@@ -1,13 +1,13 @@
 import numpy as np
 
 arr1d = np.array([10,1,8,7,3,4,9,5,6,2])
-filter_arr = []
-for e in arr1d:
-    if e > 5:
-        filter_arr.append(True)
-    else:
-        filter_arr.append(False)
-
+filter_arr = arr1d % 2 == 0
+# for e in arr1d:
+#     if e > 5:
+#         filter_arr.append(True)
+#     else:
+#         filter_arr.append(False)
+#
 print(filter_arr)
 
 arr2d = np.array([[1,2,3],[4,5,6],[7,8,9]])
@@ -30,4 +30,4 @@ int_arr_1 = np.array([1,2,3])
 int_arr_2 = np.array([4,5,6])
 
 new_arr = int_arr_1[arr_bool]
-print(new_arr)
+# print(new_arr)
