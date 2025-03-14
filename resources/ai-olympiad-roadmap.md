@@ -1,6 +1,7 @@
 # 🏆 6-WEEK AI OLYMPIAD PREPARATION PLAN
 
 ## 📚 Table of Contents
+
 - [Week 1: Competitive Programming & ML Foundations](#week-1-competitive-programming--ml-foundations)
 - [Week 2: Advanced ML & Data Analysis](#week-2-advanced-ml--data-analysis)
 - [Week 3: Deep Learning Fundamentals](#week-3-deep-learning-fundamentals)
