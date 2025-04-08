@@ -48,12 +48,47 @@
 
 # stack class
 
+# class Stack:
+#     def __init__(self):
+#         self.stack = []
+#
+#     def push(self, element):
+#         self.stack.append(element)
+#
+#     def is_empty(self):
+#         return len(self.stack) == 0
+#
+#     def pop(self):
+#         if self.is_empty():
+#             return f"stack is empty"
+#         else:
+#             return self.stack.pop()
+#
+#     def peek(self):
+#         if self.is_empty():
+#             return f"stack is empty"
+#         else:
+#             return self.stack[-1]
+#
+#     def size(self):
+#         return len(self.stack)
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
 class Stack:
     def __init__(self):
-        self.stack = []
+        self.head = None
+        self.size = 0
 
     def push(self, element):
-        self.stack.append(element)
+        node = Node(element)
+        if self.head:
+            node.next = self.head
+        self.head = node
+        self.size += 1
 
     def is_empty(self):
         return len(self.stack) == 0
@@ -72,7 +107,6 @@ class Stack:
 
     def size(self):
         return len(self.stack)
-
 
 stack1 = Stack()
 for i in range(10):
