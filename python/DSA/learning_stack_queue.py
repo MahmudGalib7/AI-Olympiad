@@ -17,8 +17,8 @@
 # print(stack_pop)
 # print(stack)
 #
-# is_stack_empy = not bool(stack)
-# print(is_stack_empy)
+# is_stack_empty = not bool(stack)
+# print(is_stack_empty)
 
 # OOP -> demo
 
@@ -74,48 +74,49 @@
 #         return len(self.stack)
 
 class Node:
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, value):
+        self.value = value
         self.next = None
+
 
 class Stack:
     def __init__(self):
         self.head = None
         self.size = 0
 
-    def push(self, element):
-        node = Node(element)
+    def push(self, value):
+        new_node = Node(value)
         if self.head:
-            node.next = self.head
-        self.head = node
+            new_node.next = self.head
+        self.head = new_node
         self.size += 1
 
-    def is_empty(self):
-        return len(self.stack) == 0
-
     def pop(self):
-        if self.is_empty():
-            return f"stack is empty"
-        else:
-            return self.stack.pop()
+        if self.isEmpty():
+            return "Stack is empty"
+        popped_node = self.head
+        self.head = self.head.next
+        self.size -= 1
+        return popped_node.value
 
     def peek(self):
-        if self.is_empty():
-            return f"stack is empty"
-        else:
-            return self.stack[-1]
+        if self.isEmpty():
+            return "Stack is empty"
+        return self.head.value
 
-    def size(self):
-        return len(self.stack)
+    def isEmpty(self):
+        return self.size == 0
 
-stack1 = Stack()
-for i in range(10):
-    stack1.push(i+1)
+    def stackSize(self):
+        return self.size
 
-print(stack1.stack)
-print(stack1.pop())
-print(stack1.stack)
-print(stack1.peek())
-print(stack1.pop())
-print(stack1.size())
-print(stack1.is_empty())
+
+myStack = Stack()
+myStack.push('A')
+myStack.push('B')
+myStack.push('C')
+
+print("Pop: ", myStack.pop())
+print("Peek: ", myStack.peek())
+print("isEmpty: ", myStack.isEmpty())
+print("Size: ", myStack.stackSize())

@@ -4,11 +4,13 @@ data       3    5    7
 Node      N1   N2   N3
 """
 
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.previous = None
         self.next = None
+
 
 n1 = Node(10)
 n2 = Node(1000)
@@ -28,9 +30,11 @@ n5.previous = n4
 current_node = n1
 while current_node:
     if current_node.next:
-        print(f"data: {current_node.data}, address: {id(current_node)}, next_address: {id(current_node.next)} \n",end=" -> ")
+        print(f"data: {current_node.data}, address: {
+              id(current_node)}, next_address: {id(current_node.next)} \n", end=" -> ")
     else:
-        print(f"data: {current_node.data}, address: {id(current_node)}, next_address: None")
+        print(f"data: {current_node.data}, address: {
+              id(current_node)}, next_address: None")
     current_node = current_node.next
 print("---------------------------------------------------------------------------------------------------------------")
 
@@ -41,7 +45,9 @@ current_node = n5
 
 while current_node:
     if current_node.previous:
-        print(f"data: {current_node.data}, address: {id(current_node)}, prev_address: {id(current_node.previous)} \n",end=" -> ")
+        print(f"data: {current_node.data}, address: {id(current_node)}, prev_address: {
+              id(current_node.previous)} \n", end=" -> ")
     else:
-        print(f"data: {current_node.data}, address: {id(current_node)}, prev_address : None")
+        print(f"data: {current_node.data}, address: {
+              id(current_node)}, prev_address : None")
     current_node = current_node.previous
