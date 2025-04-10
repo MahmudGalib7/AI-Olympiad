@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f89abcd-a8ff-498a-beae-3b1c75f98d9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DSA/sorting_algo.py" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/sorting_algo.py" afterDir="false" />
-    </list>
+    <list default="true" id="9f89abcd-a8ff-498a-beae-3b1c75f98d9b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +33,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.118A.ot.executor": "Run",
+    "Python.1A.executor": "Run",
     "Python.searching_algo.executor": "Run",
     "Python.sorting_algo.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -49,8 +49,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
-        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
