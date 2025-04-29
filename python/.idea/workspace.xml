@@ -5,44 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f89abcd-a8ff-498a-beae-3b1c75f98d9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DSA/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/.idea/DSA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Hashmaps/basic_hashmap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Hashmaps/hashmap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Hashmaps/hashset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Hashmaps/sample_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Hashmaps/test_hash_structures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Searching Algo/Binary_searching.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Searching Algo/Linear_searching.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Sorting Alog/BubbleSort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Sorting Alog/IncersionSort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Sorting Alog/MergeSort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Sorting Alog/QuickSort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Sorting Alog/SelectionSort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Tree/BinaryTree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA/Tree/tree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/problem_solving/1327A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/problem_solving/1343C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/problem_solving/1352B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/problem_solving/327A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/problem_solving/368B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/problem_solving/467B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/problem_solving/519B.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/problem_solving/1057A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/problem_solving/115A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/problem_solving/1511C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/problem_solving/1843C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/problem_solving/1950B.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/learning_hash_maps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/learning_queue.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/learning_stack.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/recursion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/searching_algo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/sorting_algo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/problem_solving/118A.ot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/problem_solving/2092B.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_solving/2092B.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/Tree/BinaryTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/Tree/BinaryTree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solving/1343C.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_solving/1343C.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solving/467B.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_solving/467B.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solving/474B.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_solving/474B.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,25 +42,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.118A.ot.executor": "Run",
-    "Python.1A.executor": "Run",
-    "Python.searching_algo.executor": "Run",
-    "Python.sorting_algo.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/run/media/galib/Developer/AI-Olympiad/python",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.118A.ot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.1A.executor&quot;: &quot;Run&quot;,
+    &quot;Python.searching_algo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sorting_algo.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/run/media/galib/Developer/AI-Olympiad/python&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -107,6 +79,7 @@
       <updated>1743777328318</updated>
       <workItem from="1743920601680" duration="39000" />
       <workItem from="1745587997017" duration="1600000" />
+      <workItem from="1745903882450" duration="1563000" />
     </task>
     <servers />
   </component>

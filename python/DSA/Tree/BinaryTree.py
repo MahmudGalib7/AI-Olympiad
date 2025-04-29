@@ -16,6 +16,7 @@ In Depth first search ( DFS ):
 
 """
 
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -32,23 +33,40 @@ class Node:
                 node.right = self.insert(node.right, data)
         return node
 
-    def preorder(self,node):
+    def preorder(self, node):
         if node:
-            self.preorder(node.left)
-            self.preorder(node.right)
+            node.preorder(node.left)
+            node.preorder(node.right)
 
-    def printPreorder(self, level = 0):
+    def inorder(self, node):
+        if node:
+            node.inorder(node.left)
+            node.inorder(node.right)
+
+    def postorder(self, node):
+        if node:
+            node.postorder(node.left)
+            node.postorder(node.right)
+    def printPreorder(self, level=0):
         print(" " * level * 4 + str(self.data))
         if self.left:
             self.left.printPreorder(level + 1)
         if self.right:
             self.right.printPreorder(level + 1)
 
-    def inorder(self, node):
-        pass
+    def printInorder(self, level=0):
+        if self.left:
+            self.left.printInorder(level + 1)
+        print(" " * level * 4 + str(self.data))
+        if self.right:
+            self.right.printInorder(level + 1)
 
-    def postorder(self, node):
-        pass
+    def printPostorder(self, level=0):
+        if self.left:
+            self.left.printPostorder(level + 1)
+        if self.right:
+            self.right.printPostorder(level + 1)
+        print(" " * level * 4 + str(self.data))
 
     def height(self, node):
         if node is None:
@@ -66,7 +84,6 @@ class Node:
             return self.search(node.right, target)
 
 
-
 # Build a tree
 root = Node(1)
 b = Node(2)
@@ -76,6 +93,13 @@ root.insert(root, 3)
 b.insert(b, 4)
 b.insert(b, 5)
 
-root.preorder(root)
+# Call the traversal and printing functions
+print("Preorder (Indented):")
 root.printPreorder()
-root.height(root)
+print("\nInorder (Indented):")
+root.printInorder()
+print("\nPostorder (Indented):")
+root.printPostorder()
+
+print("\nHeight of the tree:")
+print(root.height(root))
