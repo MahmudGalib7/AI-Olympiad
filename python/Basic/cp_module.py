@@ -1,5 +1,5 @@
 import sys
-from collections import deque, defaultdict
+from collections import deque, defaultdict, Counter
 
 size_int = sys.getsizeof(int(12))
 size_float = sys.getsizeof(float(12.01234))
@@ -68,7 +68,7 @@ de = deque(range(1000))
 # DefaultDict
 
 dd = defaultdict(int)
-s = 'The Bangladesh the country known as Bangladesh for its own country and its own name is Bangladesh for its country'.lower()
+st = 'The Bangladesh the country known as Bangladesh for its own country and its own name is Bangladesh for its country'.lower()
 # for i in 'MMMoooonnnnsssstteeeeeeerr':
 #     dd[i] += 1
 # new_s = s.split()
@@ -104,8 +104,102 @@ name = [
     'Eren',
     'G',
 ]
+
+# name_dict = defaultdict(list)
+# for i in name:
+#     y = len(i)
+#     name_dict[y].append(i)
+# print(name_dict)
+
 name_dict = defaultdict(list)
+name_count = defaultdict(int)
+
 for i in name:
-    y = len(i)
-    name_dict[y].append(i)
-print(name_dict)
+    first_letter = i[0].upper()
+    name_count[first_letter] += 1
+
+# print(name_dict)
+# print(name_count)
+
+# nested_dict = defaultdict(lambda: defaultdict(int))
+# nested_dict['Rahim']['Math'] += 1
+# nested_dict['Karim']['English'] += 1
+# nested_dict['Johan']['Law'] += 1
+# nested_dict['Aizen']['Philosophy'] += 1
+# nested_dict['Newton']['Physics'] += 1
+# nested_dict['Albert']['Quantum Mechanics'] += 1
+# for k,v in enumerate(nested_dict):
+#     print(f"{k} : {v}")
+# print(nested_dict)
+
+# nested_dict = defaultdict(lambda: defaultdict(int))
+#
+# l = [
+#     ('A', 'Math'),
+#     ('B', 'Math'),
+#     ('C', 'Math'),
+#     ('D', 'Bangla'),
+#     ('E', 'English'),
+#     ('A', 'Bangla'),
+#     ('B', 'Chemistry'),
+#     ('C', 'Physics'),
+#     ('F', 'Chemistry'),
+#     ('A', 'Physics'),
+#     ('C', 'Biology'),
+#     ('B', 'Biology'),
+#     ('B', 'Physics')
+# ]
+#
+# for char, sub in l:
+#     nested_dict[char][sub] += 1
+# print_nested_dict = {k:dict(v) for k,v in nested_dict.items()}
+# print(print_nested_dict)
+
+scores = [
+    ('A', '100'),
+    ('B', '100'),
+    ('C', '100'),
+    ('D', '99'),
+    ('E', '99'),
+    ('F', '98'),
+]
+
+dl = defaultdict(list)
+
+for char, score in scores:
+    dl[score].append(char)
+# print(dict(dl))
+
+# Counter
+numbers = [1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,1,1,2,3]
+s = "My countries name is Bangladesh because this is the name people choose and The Bangladesh the country known as Bangladesh for its own country and its own name is Bangladesh for its country".lower()
+stg = "Bangladesh"
+new_s = s.split()
+
+# print(dict(Counter(new_s)))
+
+count_stg = Counter(stg)
+count_str = Counter(new_s)
+# print(count_str.most_common())
+# print(list(count_stg.elements()))
+# count_str.subtract(count_stg)
+# print(count_str)
+# count_str.update(count_stg)
+# print(count_str)
+
+# s1 = "cork"
+# s2 = "rock"
+#
+# if Counter(s1) == Counter(s2):
+#     x = True
+# else:
+#     x = False
+# print(x)
+
+l1 = ["listen", "silent", "enlist", "hello", "below", "elbow", "cat", "act"]
+
+ld = defaultdict(list)
+for i in l1:
+    p = "".join(sorted(i))
+    ld[p].append(i)
+print(list(ld.values()))
