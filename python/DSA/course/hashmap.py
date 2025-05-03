@@ -15,7 +15,6 @@ class HashMap:
         index = self._hash_function(key)
         # Get the bucket (list) at this index
         bucket = self.buckets[index]
-
         # Check if the key already exists in the bucket
         found = False
         for i, (existing_key, existing_value) in enumerate(bucket):
@@ -46,7 +45,7 @@ class HashMap:
                 return existing_value
 
         # If the loop finishes without finding the key
-        raise KeyError(f"Key '{key}' not found in HashMap") # Or return None
+        raise KeyError2(f"Key '{key}' not found in HashMap") # Or return None
 
     def remove(self, key):
         # Calculate the index for the key
