@@ -118,14 +118,13 @@ AI-Olympiad/
 │ ├── requirements.txt
 │ └── setup.py
 
+```
 ---
 
 ## Notes
 
 - `... (main2.py to main14.py)` is used to shorten the tree; you can expand it fully if needed.
 - I used simplified file names like `linear_algebra.pdf` in place of the long UUID-style name for readability. Feel free to swap back your actual file names.
-
-```
 
 ## 📊 Featured Project: NumPy Data Analyzer
 
