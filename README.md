@@ -25,31 +25,106 @@ Welcome to my AI Olympiad preparation repository! This space captures my hands-o
 
 ```
 AI-Olympiad/
-├── 📂 python/
-│   ├── 📘 Basic/
-│   └── 🔢 DSA/
-├── 📊 data_analysis/
-│   ├── 📈 numpy/
-|   ├── 📈 pandas/
-│   └── 📚 visualization/
-├── 🧠 machine_learning/
-│   ├── 🔍 classical_algorithms/
-│   ├── 📊 feature_engineering/
-│   └── 📉 model_evaluation/
-├── 🤖 deep_learning/
-│   ├── 🧠 neural_networks/
-│   ├── 🖼️ computer_vision/
-│   └── 🔤 natural_language_processing/
-├── 📘 math_foundations/
-│   ├── 📐 linear_algebra/
-│   ├── 🧮 calculus/
-│   └── 📊 probability_statistics/
-├── 🏆 competitions/
-│   ├── 🚀 bdai_olympiad/
-│   └── 📝 mock_contests/
-└── 📚 resources/
-    ├── 📖 Books/
-    └── prep.md
+|
+├── competitions
+│ ├── contest_practical
+│ └── contests_theory
+├── data_analysis
+│ ├── Basic
+│ │ └── practice
+│ │ ├── Dataset
+│ │ │ ├── data.csv
+│ │ │ └── new_data.csv
+│ │ ├── main.py
+│ │ ├── main1.py
+│ │ ├── ... (main2.py to main14.py)
+│ ├── notebook
+│ │ ├── Dataset
+│ │ │ ├── data
+│ │ │ │ ├── bios.csv
+│ │ │ │ ├── new_bios.csv
+│ │ │ │ ├── noc_regions.csv
+│ │ │ │ ├── olympics-data.xlsx
+│ │ │ │ ├── results.csv
+│ │ │ │ ├── results.feather
+│ │ │ │ └── results.parquet
+│ │ │ └── warmup-data
+│ │ │ └── coffee.csv
+│ │ ├── learning_numpy.ipynb
+│ │ ├── learning_pandas.ipynb
+│ │ └── Regular_Expression.ipynb
+│ └── project
+│ └── numpy-data-analyzer
+│ ├── data
+│ │ └── sample_data.csv
+│ ├── example_app.py
+│ ├── notebooks
+│ │ └── analysis_examples.ipynb
+│ ├── numpy_data_analyzer
+│ │ ├── data_processor.py
+│ │ ├── init.py
+│ ├── README.md
+│ ├── requirements.txt
+│ ├── setup.py
+│ ├── src
+│ │ ├── data_processor.py
+│ │ ├── models.py
+│ │ ├── utils.py
+│ │ └── visualizer.py
+│ └── tests
+│ ├── test_data_processor.py
+│ └── test_visualizer.py
+├── deep_learning
+│ ├── computer_vision
+│ ├── natural_language_processing
+│ └── neural_networks
+├── machine_learning
+│ └── notebook
+│ └── In_to_Machine_Learning.ipynb
+├── math_foundations
+│ ├── calculus
+│ ├── linear_algebra
+│ │ └── linear_algebra.pdf
+│ ├── matrix
+│ ├── probability
+│ └── Statics
+├── python
+│ ├── Basic
+│ ├── DSA
+│ │ ├── course
+│ │ ├── Hashmaps
+│ │ ├── Linked List
+│ │ ├── Recursion
+│ │ ├── Searching Algo
+│ │ ├── Sorting Algo
+│ │ ├── Stack & Queue
+│ │ └── Tree
+│ ├── problem_solving
+│ │ ├── A
+│ │ ├── B
+│ │ ├── C
+│ │ ├── D
+│ │ ├── AI-Olympiad
+│ │ ├── AI-Olympiad Mock Test
+│ │ ├── Course
+│ │ └── Novo-contest
+│ └── projects
+│ └── smart_home
+│ ├── automation
+│ ├── core
+│ ├── devices
+│ ├── tests
+│ ├── README.md
+│ ├── requirements.txt
+│ └── setup.py
+
+---
+
+## Notes
+
+- `... (main2.py to main14.py)` is used to shorten the tree; you can expand it fully if needed.
+- I used simplified file names like `linear_algebra.pdf` in place of the long UUID-style name for readability. Feel free to swap back your actual file names.
+
 ```
 
 ## 📊 Featured Project: NumPy Data Analyzer
