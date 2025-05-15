@@ -84,8 +84,8 @@
 *   Tree splitting intuition
 
 **📺 Codebasics Videos:**
-- [ ] 10. Decision Trees
-- [ ] 11. Random Forest
+- [x] 10. Decision Trees
+- [x] 11. Random Forest
 
 **🎥 Optional Readings:**
 
