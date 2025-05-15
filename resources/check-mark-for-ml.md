@@ -23,21 +23,21 @@
 - [x] 1. Introduction to Machine Learning
 - [x] 2. Linear Regression (Single Variable)
 - [x] 3. Linear Regression (Multiple Variables)
-- [ ] 4. Gradient Descent and Cost Function
+- [x] 4. Gradient Descent and Cost Function
 
 **🎥 Watch from 3Blue1Brown:**
 
 *   Linear Algebra (Essence of Linear Algebra):
     - [x] Ep. 1: Vectors
-    - [ ] Ep. 2: Linear Combinations
-    - [ ] Ep. 3: Matrix Transformations
-    - [ ] Ep. 6: Dot Product
-    - [ ] Ep. 9: Projections
+    - [x] Ep. 2: Linear Combinations
+    - [x] Ep. 3: Matrix Transformations
+    - [x] Ep. 6: Dot Product
+    - [x] Ep. 9: Projections
 *   Calculus (Essence of Calculus):
-    - [ ] Ep. 1: Introduction to Derivatives
-    - [ ] Ep. 2: Slopes as Derivatives
-    - [ ] Ep. 4: Derivatives and Functions
-    - [ ] Ep. 6: Chain Rule
+    - [x] Ep. 1: Introduction to Derivatives
+    - [x] Ep. 2: Slopes as Derivatives
+    - [x] Ep. 4: Derivatives and Functions
+    - [x] Ep. 6: Chain Rule
 
 ---
 
@@ -48,9 +48,9 @@
 *   No deep math — mostly about data processing.
 
 **📺 Codebasics Videos:**
-- [ ] 5. Dummy Variables & One Hot Encoding
-- [ ] 6. Saving Models with Joblib and Pickle
-- [ ] 7. Training and Testing Data
+- [x] 5. Dummy Variables & One Hot Encoding
+- [x] 6. Saving Models with Joblib and Pickle
+- [x] 7. Training and Testing Data
 
 ---
 
@@ -65,13 +65,13 @@
 *   Optimization via gradient descent
 
 **📺 Codebasics Videos:**
-- [ ] 8. Logistic Regression (Binary Classification)
-- [ ] 9. Logistic Regression (Multiclass Classification)
+- [x] 8. Logistic Regression (Binary Classification)
+- [x] 9. Logistic Regression (Multiclass Classification)
 
 **🎥 Watch from Essence of Calculus:**
 
-- [ ] Rewatch Ep. 6: Chain Rule
-- [ ] Optional: Learn log function derivative if curious
+- [x] Rewatch Ep. 6: Chain Rule
+- [x] Optional: Learn log function derivative if curious
 
 ---
 
