@@ -23,6 +23,5 @@ def QuickSort(arr, low=0, high=None):
         QuickSort(arr, low, p_index-1)
         QuickSort(arr, p_index+1, high)
 
-
 QuickSort(a)
 print(a)
