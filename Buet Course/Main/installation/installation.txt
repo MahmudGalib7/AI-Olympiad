@@ -1,0 +1,9 @@
+1. Anaconda(Windows):
+https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Windows-x86_64.exe
+
+demo video: https://www.youtube.com/watch?v=UTqOXwAi1pE&ab_channel=AmitThinks
+
+2. VSCode:
+https://code.visualstudio.com/download
+
+demo video: https://www.youtube.com/watch?v=JPZsB_6yHVo&ab_channel=GeekyScript
