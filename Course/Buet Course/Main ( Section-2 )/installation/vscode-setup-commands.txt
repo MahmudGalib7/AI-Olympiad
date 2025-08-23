@@ -1,0 +1,19 @@
+
+
+conda --version
+
+
+# go to anaconda prompt
+conda init
+conda init powershell
+
+
+# python notebook extension .ipynb
+
+# open a vscode terminal
+ctrl + `
+
+# if the terminal is powershell, select cmd
+
+activate ./.conda 
+pip install ipykernel
