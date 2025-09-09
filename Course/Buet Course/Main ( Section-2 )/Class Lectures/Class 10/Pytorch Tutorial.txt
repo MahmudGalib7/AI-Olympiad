@@ -1,2 +1,0 @@
-[Internet Shortcut]
-URL=https://github.com/yunjey/pytorch-tutorial
